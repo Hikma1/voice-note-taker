@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Note Taker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Voice Note Taker</h1>
+    
+    <!-- Mic Button -->
+    <button id="startBtn">🎤 Start Speaking</button>
+    
+    <!-- Where note appears while speaking -->
+    <p id="transcript">Your note will appear here...</p>
+    
+    <!-- Save Button -->
+    <button id="saveBtn" disabled>Save Note</button>
+    
+    <!-- List of Saved Notes -->
+    <h2>Saved Notes</h2>
+    <ul id="notesList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
