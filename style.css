@@ -26,3 +26,19 @@ button {
   background: #4CAF50;
   color: white;
 }
+#saveBtn {
+  background: #2196F3;
+  color: white;
+}
+#saveBtn:disabled {
+  background: #ccc;
+}
+
+#transcript {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
