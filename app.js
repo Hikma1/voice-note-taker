@@ -41,3 +41,9 @@ function deleteNote(index) {
   localStorage.setItem('notes', JSON.stringify(notes));
   renderNotes();
 }
+// Voice API Setup
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+if (SpeechRecognition) {
+  const recognition = new SpeechRecognition();
+  recognition.continuous = true; // Keep listening
+  recognition.interimResults = true; // Show live text
