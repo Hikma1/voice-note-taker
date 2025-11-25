@@ -24,3 +24,14 @@ function renderNotes() {
     notesList.appendChild(li);
   });
 }
+// Save current note
+saveBtn.addEventListener('click', () => {
+  const text = transcript.textContent;
+  if (text !== 'Your note will appear here...') {
+    notes.push(text);
+    localStorage.setItem('notes', JSON.stringify(notes));
+    renderNotes();
+    transcript.textContent = 'Your note will appear here...';
+    saveBtn.disabled = true;
+  }
+});
