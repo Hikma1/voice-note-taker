@@ -35,3 +35,9 @@ saveBtn.addEventListener('click', () => {
     saveBtn.disabled = true;
   }
 });
+// Delete a note
+function deleteNote(index) {
+  notes.splice(index, 1);
+  localStorage.setItem('notes', JSON.stringify(notes));
+  renderNotes();
+}
