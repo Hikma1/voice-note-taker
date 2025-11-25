@@ -47,3 +47,8 @@ if (SpeechRecognition) {
   const recognition = new SpeechRecognition();
   recognition.continuous = true; // Keep listening
   recognition.interimResults = true; // Show live text
+// When speaking starts
+  recognition.onstart = () => {
+    startBtn.textContent = '🔴 Listening...';
+    startBtn.disabled = true;
+  };
