@@ -61,3 +61,8 @@ if (SpeechRecognition) {
     transcript.textContent = currentText || 'Your note will appear here...';
     saveBtn.disabled = currentText === '';
   };} 
+  // When speaking stops
+  recognition.onend = () => {
+    startBtn.textContent = '🎤 Start Speaking';
+    startBtn.disabled = false;
+  };
