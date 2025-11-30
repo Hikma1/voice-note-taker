@@ -52,3 +52,12 @@ if (SpeechRecognition) {
     startBtn.textContent = '🔴 Listening...';
     startBtn.disabled = true;
   };
+ // Live text from voice
+  recognition.onresult = (event) => {
+    let currentText = '';
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      currentText += event.results[i][0].transcript;
+    }
+    transcript.textContent = currentText || 'Your note will appear here...';
+    saveBtn.disabled = currentText === '';
+  };} 
