@@ -75,3 +75,9 @@ if (SpeechRecognition) {
   // Start button click
   startBtn.addEventListener('click', () => {
     recognition.start();
+    transcript.textContent = '';
+  });
+else {
+  transcript.textContent = 'Sorry, your browser does not support voice recognition.';
+  startBtn.disabled = true;
+}
