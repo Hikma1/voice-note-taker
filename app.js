@@ -66,3 +66,9 @@ if (SpeechRecognition) {
     startBtn.textContent = '🎤 Start Speaking';
     startBtn.disabled = false;
   };
+  // Error handling
+  recognition.onerror = (event) => {
+    console.log('Error:', event.error);
+    transcript.textContent = 'Error: Try again.';
+    recognition.stop();
+  };
