@@ -72,3 +72,6 @@ if (SpeechRecognition) {
     transcript.textContent = 'Error: Try again.';
     recognition.stop();
   };
+  // Start button click
+  startBtn.addEventListener('click', () => {
+    recognition.start();
